@@ -17,8 +17,10 @@ Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
 URL:		http://par.perl.org
 %if %{with tests}
 BuildRequires:	perl-Archive-Zip >= 1.00
-BuildRequires:	perl-Module-ScanDeps >= 0.30
+BuildRequires:	perl-Module-ScanDeps >= 0.32
 BuildRequires:	perl-PAR-Dist >= 0.05
+BuildRequires:	perl-Digest-SHA1
+BuildRequires:	perl-Module-Signature >= 0.35
 %endif
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
