@@ -1,3 +1,6 @@
+# ToDo:
+# - include /usr/bin/part and /usr/bin/tkpp or not?
+# - what about App::Packer::PAR ?
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
@@ -7,13 +10,13 @@
 Summary:	Perl Archive Toolkit
 Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
 Name:		perl-%{pnam}
-Version:	0.80
-Release:	2
+Version:	0.83
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	d845f051ef1933c9721fd07de51c73f4
+# Source0-md5:	97c2611b5ca0b5d015490525a14b17d5
 URL:		http://par.perl.org
 %if %{with tests}
 BuildRequires:	perl-Archive-Zip >= 1.00
@@ -74,6 +77,7 @@ Mo¿na równie¿ przekszta³ciæ plik PAR w skrypt zawieraj±cy pakiet
 
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
+
 %{?with_tests:%{__make} test}
 
 %install
