@@ -1,6 +1,5 @@
 # ToDo:
 # - include /usr/bin/part and /usr/bin/tkpp or not?
-# - what about App::Packer::PAR ?
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
@@ -11,7 +10,7 @@ Summary:	Perl Archive Toolkit
 Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
 Name:		perl-PAR
 Version:	0.83
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -94,11 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README ChangeLog AUTHORS
 %{perl_vendorlib}/PAR.pm
 %{perl_vendorlib}/PAR
+%{perl_vendorlib}/App/*/*.pm
 %exclude %{perl_vendorlib}/PAR/*.pod
-%{_mandir}/man3/PAR*
-%{_mandir}/man1/*
-%attr(755,root,root) %{_bindir}/par.pl
-# FIXME: conflicts with nss-tools
-%attr(755,root,root) %{_bindir}/pp
-# Do we need "parl" (static => huge)?
-%attr(755,root,root) %{_bindir}/parldyn
+%{_mandir}/man?/*
+%attr(755,root,root) %{_bindir}/*
