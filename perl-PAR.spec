@@ -6,16 +6,16 @@
 %define	pnam	PAR
 Summary:	Perl Archive Toolkit
 Name:		perl-%{pnam}
-Version:	0.74
+Version:	0.75
 Release:	1
 License:	Same as Perl itself
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	646af8c792372c78bcf542799b1e8d9b
+# Source0-md5:	273514ed60806cf9a66c922919a12bb4
 URL:		http://par.perl.org
-BuildRequires:	perl-Archive-Zip
-BuildRequires:	perl-Module-ScanDeps
-BuildRequires:	perl-PAR-Dist
+BuildRequires:	perl-Archive-Zip >= 1.00
+BuildRequires:	perl-Module-ScanDeps >= 0.30
+BuildRequires:	perl-PAR-Dist >= 0.05
 BuildRequires:	perl-base >= 5.8.0
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
