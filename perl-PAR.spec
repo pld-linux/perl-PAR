@@ -1,7 +1,7 @@
-
+#
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pnam	PAR
 Summary:	Perl Archive Toolkit
@@ -10,7 +10,7 @@ Name:		perl-%{pnam}
 Version:	0.80
 Release:	1
 # same as perl
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	d845f051ef1933c9721fd07de51c73f4
