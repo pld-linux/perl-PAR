@@ -6,16 +6,16 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pnam	PAR
+%define	pdir	PAR
 Summary:	Perl Archive Toolkit
 Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
-Name:		perl-%{pnam}
+Name:		perl-PAR
 Version:	0.83
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 # Source0-md5:	97c2611b5ca0b5d015490525a14b17d5
 URL:		http://par.perl.org
 %if %{with tests}
@@ -68,7 +68,7 @@ Mo¿na równie¿ przekszta³ciæ plik PAR w skrypt zawieraj±cy pakiet
   podstawowego Perla
 
 %prep
-%setup -q -n %{pnam}-%{version}
+%setup -q -n %{pdir}-%{version}
 
 %build
 %{__perl} Makefile.PL \
