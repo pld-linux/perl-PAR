@@ -41,18 +41,18 @@ You can also turn a PAR file into a self-contained script
 - ...you get an executable not even needing core Perl
 
 %description -l pl
-Zestaw narzêdzi perlowych do archiwizacji:
+Perl Archive Toolkit:
 - robi to samo, co JAR (archiwizator Javy), ale dla Perla
 - u¿ywa niezale¿nego od platformy, formatu pliku skompresowanego (zip)
-- kumuluje modu³y, skrypty i inne pliki w jednym pliku
-- jest ³atwy w generacji, aktualizacji i rozpakowywaniu
-Kozry¶ci korzystania z PAR:
-- skrócony czas pobierania i rozpakowywania
+- integruje w jeden plik modu³y, skrypty i inne pliki
+- pliki PAR s± ³atwe do wygenerowania, aktualizacji i rozpakowania
+Korzy¶ci p³yn±ce ze stosowania PAR:
+- skrócenie czasu pobierania i wdro¿enia programu
 - oszczêdno¶æ miejsca na dysku wynikaj±ca z kompresji i wybiórczego
   pakietowania
 - spójno¶æ wersji: rozwi±zuje problemy zgodno¶ci w przód
 - wsparcie zespo³u: par@perl.org
-Mo¿mna równie¿ przkszta³ciæ plik PAR w skrypt zawieraj±cy pakiet
+Mo¿na równie¿ przekszta³ciæ plik PAR w skrypt zawieraj±cy pakiet
 - ³±czy w sobie wszystkie niezbêdne obce modu³y
 - wymaga do uruchomienia na maszynie docelowej jedynie podstawowego
   Perla
