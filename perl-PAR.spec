@@ -7,13 +7,13 @@
 Summary:	Perl Archive Toolkit
 Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
 Name:		perl-%{pnam}
-Version:	0.79
+Version:	0.80
 Release:	1
 # same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	e0b8481e47d3735a41aa97dd30038ec9
+# Source0-md5:	d845f051ef1933c9721fd07de51c73f4
 URL:		http://par.perl.org
 %if %{with tests}
 BuildRequires:	perl-Archive-Zip >= 1.00
