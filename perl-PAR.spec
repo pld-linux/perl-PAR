@@ -24,8 +24,8 @@ BuildRequires:	perl-Compress-Zlib >= 1.30
 BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Module-ScanDeps >= 0.37
 BuildRequires:	perl-Module-Signature >= 0.35
-BuildRequires:	perl-PAR-Dist >= 0.06
 %endif
+BuildRequires:	perl-PAR-Dist >= 0.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
