@@ -23,7 +23,7 @@ BuildRequires:	perl-Module-ScanDeps >= 0.37
 BuildRequires:	perl-Module-Signature >= 0.35
 BuildRequires:	perl-PAR-Dist >= 0.06
 %endif
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
