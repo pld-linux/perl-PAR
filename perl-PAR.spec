@@ -7,20 +7,21 @@
 Summary:	Perl Archive Toolkit
 Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
 Name:		perl-%{pnam}
-Version:	0.76
+Version:	0.79
 Release:	1
 # same as perl
-License:	GPL v1+ or Artistic
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	44e2565cb30d063f0eefd2a7d6e17dff
+# Source0-md5:	e0b8481e47d3735a41aa97dd30038ec9
 URL:		http://par.perl.org
 %if %{with tests}
 BuildRequires:	perl-Archive-Zip >= 1.00
-BuildRequires:	perl-Module-ScanDeps >= 0.32
-BuildRequires:	perl-PAR-Dist >= 0.05
+BuildRequires:	perl-Compress-Zlib >= 1.30
 BuildRequires:	perl-Digest-SHA1
+BuildRequires:	perl-Module-ScanDeps >= 0.37
 BuildRequires:	perl-Module-Signature >= 0.35
+BuildRequires:	perl-PAR-Dist >= 0.06
 %endif
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -88,12 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README ChangeLog AUTHORS
 %{perl_vendorlib}/PAR.pm
-%{perl_vendorlib}/PAR/*.pm
-%dir %{perl_vendorlib}/PAR/Filter
-%{perl_vendorlib}/PAR/Filter/*
-%{perl_vendorlib}/App/Packer/*.pm
-# TODO: App::Packer::PAR
-%{_mandir}/man3/*
+%{perl_vendorlib}/PAR
+%exclude %{perl_vendorlib}/PAR/*.pod
+%{_mandir}/man3/PAR*
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/par.pl
 # FIXME: conflicts with nss-tools
