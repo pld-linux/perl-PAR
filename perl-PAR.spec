@@ -1,24 +1,25 @@
-#
+
 # Conditional build:
-# _without_tests - do not perform "make test"
-#
+%bcond_without	tests	# do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define	pnam	PAR
 Summary:	Perl Archive Toolkit
 Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
 Name:		perl-%{pnam}
-Version:	0.75
+Version:	0.76
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	273514ed60806cf9a66c922919a12bb4
+# Source0-md5:	44e2565cb30d063f0eefd2a7d6e17dff
 URL:		http://par.perl.org
+%if %{with tests}
 BuildRequires:	perl-Archive-Zip >= 1.00
 BuildRequires:	perl-Module-ScanDeps >= 0.30
 BuildRequires:	perl-PAR-Dist >= 0.05
-BuildRequires:	perl-base >= 5.8.0
+%endif
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,11 +66,12 @@ Mo¿na równie¿ przekszta³ciæ plik PAR w skrypt zawieraj±cy pakiet
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+	INSTALLDIRS=vendor \
+	--skipdeps	# make ExtUtils::Autoinstall non-interactive
 
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -85,6 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README ChangeLog AUTHORS
 %{perl_vendorlib}/PAR.pm
 %{perl_vendorlib}/PAR/*.pm
+%dir %{perl_vendorlib}/PAR/Filter
+%{perl_vendorlib}/PAR/Filter/*
 %{perl_vendorlib}/App/Packer/*.pm
 # TODO: App::Packer::PAR
 %{_mandir}/man3/*
