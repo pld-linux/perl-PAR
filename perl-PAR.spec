@@ -10,7 +10,7 @@ Summary:	Perl Archive Toolkit
 Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
 Name:		perl-PAR
 Version:	0.85
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -27,6 +27,7 @@ BuildRequires:	perl-Module-Signature >= 0.35
 BuildRequires:	perl-PAR-Dist >= 0.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl(DynaLoader) = %(%{__perl} -MDynaLoader -e 'print DynaLoader->VERSION')
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
