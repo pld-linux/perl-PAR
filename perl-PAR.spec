@@ -11,6 +11,7 @@ Release:	1
 License:	Same as Perl itself
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pnam}/%{pnam}-%{version}.tar.gz
+# Source0-md5:	646af8c792372c78bcf542799b1e8d9b
 URL:		http://par.perl.org
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-Module-ScanDeps
