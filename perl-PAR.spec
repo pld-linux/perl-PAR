@@ -7,7 +7,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	PAR
 Summary:	Perl Archive Toolkit
-Summary(pl):	Zestaw narzêdzi perlowych do archiwizacji
+Summary(pl.UTF-8):   Zestaw narzÄ™dzi perlowych do archiwizacji
 Name:		perl-PAR
 Version:	0.90
 Release:	1
@@ -47,24 +47,24 @@ You can also turn a PAR file into a self-contained script
 - If you use pp to compile the script...
 - ...you get an executable not even needing core Perl
 
-%description -l pl
+%description -l pl.UTF-8
 Perl Archive Toolkit:
 - robi to samo, co JAR (archiwizator Javy), ale dla Perla
-- u¿ywa niezale¿nego od platformy, formatu pliku skompresowanego (zip)
-- integruje w jeden plik modu³y, skrypty i inne pliki
-- pliki PAR s± ³atwe do wygenerowania, aktualizacji i rozpakowania
-Korzy¶ci p³yn±ce ze stosowania PAR:
-- skrócenie czasu pobierania i wdro¿enia programu
-- oszczêdno¶æ miejsca na dysku wynikaj±ca z kompresji i wybiórczego
+- uÅ¼ywa niezaleÅ¼nego od platformy, formatu pliku skompresowanego (zip)
+- integruje w jeden plik moduÅ‚y, skrypty i inne pliki
+- pliki PAR sÄ… Å‚atwe do wygenerowania, aktualizacji i rozpakowania
+KorzyÅ›ci pÅ‚ynÄ…ce ze stosowania PAR:
+- skrÃ³cenie czasu pobierania i wdroÅ¼enia programu
+- oszczÄ™dnoÅ›Ä‡ miejsca na dysku wynikajÄ…ca z kompresji i wybiÃ³rczego
   pakietowania
-- spójno¶æ wersji: rozwi±zuje problemy zgodno¶ci w przód
-- wsparcie zespo³u: par@perl.org
-Mo¿na równie¿ przekszta³ciæ plik PAR w skrypt zawieraj±cy pakiet
-- ³±czy w sobie wszystkie niezbêdne obce modu³y
+- spÃ³jnoÅ›Ä‡ wersji: rozwiÄ…zuje problemy zgodnoÅ›ci w przÃ³d
+- wsparcie zespoÅ‚u: par@perl.org
+MoÅ¼na rÃ³wnieÅ¼ przeksztaÅ‚ciÄ‡ plik PAR w skrypt zawierajÄ…cy pakiet
+- Å‚Ä…czy w sobie wszystkie niezbÄ™dne obce moduÅ‚y
 - wymaga do uruchomienia na maszynie docelowej jedynie podstawowego
   Perla
 - przy wykorzystaniu pp do kompilacji skryptu...
-- ...dostaje siê program uruchamialny nie wymagaj±cy nawet
+- ...dostaje siÄ™ program uruchamialny nie wymagajÄ…cy nawet
   podstawowego Perla
 
 %prep
