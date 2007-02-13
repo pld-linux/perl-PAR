@@ -7,7 +7,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	PAR
 Summary:	Perl Archive Toolkit
-Summary(pl.UTF-8):   Zestaw narzędzi perlowych do archiwizacji
+Summary(pl.UTF-8):	Zestaw narzędzi perlowych do archiwizacji
 Name:		perl-PAR
 Version:	0.90
 Release:	1
