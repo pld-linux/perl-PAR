@@ -76,6 +76,7 @@ Można również przekształcić plik PAR w skrypt zawierający pakiet
 	--skipdeps	# make ExtUtils::Autoinstall non-interactive
 
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
