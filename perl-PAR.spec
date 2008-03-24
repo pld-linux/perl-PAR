@@ -14,9 +14,9 @@ Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/PAR/%{pdir}-%{version}.tar.gz
 # Source0-md5:	8451bdb86e0ef4e98a9851fdd64ab362
-URL:		http://par.perl.org
+URL:		http://par.perl.org/
 BuildRequires:	perl-Archive-Zip >= 1.00
 %if %{with tests}
 BuildRequires:	perl-Compress-Zlib >= 1.30
@@ -93,9 +93,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog AUTHORS TODO
+%attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/PAR.pm
 %{perl_vendorlib}/PAR/*
 %{perl_vendorlib}/App/*/*.pm
 %exclude %{perl_vendorlib}/PAR/*.pod
 %{_mandir}/man?/*
-%attr(755,root,root) %{_bindir}/*
