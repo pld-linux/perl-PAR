@@ -19,7 +19,7 @@ Source0:	http://www.cpan.org/modules/by-module/PAR/%{pdir}-%{version}.tar.gz
 URL:		http://par.perl.org/
 BuildRequires:	perl-Archive-Zip >= 1.00
 %if %{with tests}
-BuildRequires:	perl-Compress-Zlib >= 1.30
+BuildRequires:	perl(Compress::Zlib) >= 1.30
 BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Module-ScanDeps >= 0.45
 BuildRequires:	perl-Module-Signature >= 0.35
