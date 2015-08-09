@@ -10,7 +10,7 @@ Summary:	Perl Archive Toolkit
 Summary(pl.UTF-8):	Zestaw narzędzi perlowych do archiwizacji
 Name:		perl-PAR
 Version:	1.005
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
