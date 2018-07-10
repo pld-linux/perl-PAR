@@ -9,13 +9,13 @@
 Summary:	Perl Archive Toolkit
 Summary(pl.UTF-8):	Zestaw narzędzi perlowych do archiwizacji
 Name:		perl-PAR
-Version:	1.005
-Release:	3
+Version:	1.015
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/PAR/%{pdir}-%{version}.tar.gz
-# Source0-md5:	a1a7d8cc4deb106c3e04b190fa2d9325
+# Source0-md5:	7a071dd811176fafe74ff054cb8962ce
 URL:		http://par.perl.org/
 BuildRequires:	perl-Archive-Zip >= 1.00
 %if %{with tests}
@@ -91,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog AUTHORS TODO
+%doc README Changes AUTHORS
 %{perl_vendorlib}/PAR.pm
 %{perl_vendorlib}/PAR/*
 %exclude %{perl_vendorlib}/PAR/*.pod
