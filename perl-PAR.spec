@@ -4,7 +4,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	PAR
 Summary:	Perl Archive Toolkit
 Summary(pl.UTF-8):	Zestaw narzędzi perlowych do archiwizacji
